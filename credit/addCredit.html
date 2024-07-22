@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.6.3/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>添加录入学分</legend>
+</fieldset>
+<div class="layui-form layuimini-form">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">姓名</label>
+        <div class="layui-input-block">
+            <input type="text" id="name" name="name" lay-verify="required" lay-reqtext="--姓名不能为空--" placeholder="请输入姓名" value="" class="layui-input">
+            <tip>2-4个汉字</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">学号</label>
+        <div class="layui-input-block">
+            <input type="text" id="studentID" name="srudentId" lay-verify="required" lay-reqtext="--学号不能为空--" placeholder="请输入学号" value="" class="layui-input">
+            <tip>数字和字母组合</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">年级</label>
+        <div class="layui-input-block">
+            <input id="grade" type="text" name="grade"  placeholder="--请选择年级--" value="" class="layui-input">
+            <tip>请选择入学年份</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">院系</label>
+        <div class="layui-input-block">
+            <select name="college" lay-filter="college">
+                <option value="">--请选择院系--</option>
+                <option value="0">中北大学</option>
+                <option value="1">太原科技大学</option>
+                <option value="2">太原工业学院</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">分值</label>
+        <div class="layui-input-block">
+            <input type="text" id="score" name="score" lay-verify="required"  placeholder="--请输入分值--" value="" class="layui-input">
+            <tip>数字</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">事由</label>
+        <div class="layui-input-block">
+            <select name="content" lay-filter="content">
+                <option value="">--请选择事由--</option>
+                <option value="0">公开课</option>
+                <option value="1">学术讲座</option>
+                <option value="2">线上课</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">取得时间</label>
+        <div class="layui-input-block">
+            <input type="text"  name="years" class="layui-input" id="ID-laydate-type-month" placeholder="--请输入年月--">
+            <tip>请选择入年月</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">总分</label>
+        <div class="layui-input-block">
+            <input type="text" id="scores" name="scores" lay-verify="required"  placeholder="--请输入总分--" value="" class="layui-input">
+            <tip>数字</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">备注信息</label>
+        <div class="layui-input-block">
+            <textarea name="remark" class="layui-textarea" placeholder="--请输入备注信息--"></textarea>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+        </div>
+    </div>
+</div>
+<script src="../../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            laydate = layui.laydate,
+            $ = layui.$;
+
+        // 年选择器
+        laydate.render({
+            elem: '#grade',
+            type: 'year'
+        });
+
+        // 年月选择器
+        laydate.render({
+            elem: '#ID-laydate-type-month',
+            type: 'month'
+        });
+
+        //监听指定开关
+        form.on('switch(switchTest)', function (data) {
+            layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+
+        });
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+
+                // 关闭弹出层
+                layer.close(index);
+
+                var iframeIndex = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(iframeIndex);
+
+            });
+
+            return false;
+        });
+
+        // 姓名
+        var flag1 = false;
+        $("#name").blur(function (){
+            // 获取name的值
+            var name = $("#name").val();
+            var reg = /^[\u4e00-\u9fA5]{2,6}$/;
+            flag1 = reg.test(name);
+            if(name == null || name === '' || name.legend === 0) {
+                $("#name").css({"border":"1px solid red"})
+                layer.tips('姓名不能为空', '#name', {
+                    tips: [3, 'red']
+                });
+                return;
+            }
+            // 姓名是否符合正则表达式，如果不符合，提示格式不正确
+            if(!flag1){
+                layer.tips('格式不正确', '#name', {
+                    tips: [3, 'red'],
+                    time: 3000
+                });
+            }else{
+                $("#name").css({"border":"1px solid green"})
+            }
+        })
+
+        // 学号
+        var flag2 = false;
+        $("#studentID").blur(function (){
+            // 获取studentID的值
+            var studentID = $("#studentID").val();
+            var reg = /^[a-zA-Z0-9]{2,8}$/;
+            flag2 = reg.test(studentID);
+            if(studentID == null || studentID === '' || studentID.legend === 0) {
+                $("#studentID").css({"border":"1px solid red"})
+                layer.tips('学号不能为空', '#studentID', {
+                    tips: [3, 'red']
+                });
+                return;
+            }
+            // 学号是否符合正则表达式，如果不符合，提示格式不正确
+            if(!flag2){
+                layer.tips('格式不正确', '#studentID', {
+                    tips: [3, 'red'],
+                    time: 3000
+                });
+            }else{
+                $("#studentID").css({"border":"1px solid green"})
+            }
+        })
+
+        // 分值
+        var flag3 = false;
+        $("#score").blur(function (){
+            // 获取score的值
+            var score = $("#score").val();
+            var reg = /^-?(0|([1-9][0-9]*))(\.[\d]+)?$/;
+            flag3 = reg.test(score);
+            if(score == null || score === '' || score.legend === 0) {
+                $("#score").css({"border":"1px solid red"})
+                layer.tips('学号不能为空', '#score', {
+                    tips: [3, 'red']
+                });
+                return;
+            }
+            // 分值是否符合正则表达式，如果不符合，提示格式不正确
+            if(!flag3){
+                layer.tips('格式不正确', '#score', {
+                    tips: [3, 'red'],
+                    time: 3000
+                });
+            }else{
+                $("#score").css({"border":"1px solid green"})
+            }
+        })
+
+        // 总分
+        var flag4 = false;
+        $("#scores").blur(function (){
+            // 获取scores的值
+            var scores = $("#scores").val();
+            var reg = /^-?(0|([1-9][0-9]*))(\.[\d]+)?$/;
+            flag4 = reg.test(scores);
+            if(scores == null || scores === '' || scores.legend === 0) {
+                $("#scores").css({"border":"1px solid red"})
+                layer.tips('总分不能为空', '#scores', {
+                    tips: [3, 'red']
+                });
+                return;
+            }
+            // 总分是否符合正则表达式，如果不符合，提示格式不正确
+            if(!flag4){
+                layer.tips('格式不正确', '#scores', {
+                    tips: [3, 'red'],
+                    time: 3000
+                });
+            }else{
+                $("#scores").css({"border":"1px solid green"})
+            }
+        })
+
+
+        // 给表单施加点击事件
+        $("#formId").click(function (){
+            if(flag1 && flag2 && flag3 && flag4){
+                $("#formId").submit();
+            }
+        })
+
+    });
+</script>
+</body>
+</html>
