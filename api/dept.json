@@ -1,0 +1,67 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 100,
+  "data": [
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    },
+    {
+      "name": "张三",
+      "studentID": "2120880101",
+      "departmentName": "太原工业学院",
+      "codeName": "12"
+    }
+  ]
+}

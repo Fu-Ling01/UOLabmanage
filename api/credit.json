@@ -1,0 +1,107 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 100,
+  "data": [
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    },
+    {
+      "name": "张三",
+      "studentId": 2120880101,
+      "grade": "2022",
+      "college": "太原工业学院",
+      "score": "1.5",
+      "content": "公开课",
+      "years": "2022.7",
+      "scores": "3"
+    }
+  ]
+}

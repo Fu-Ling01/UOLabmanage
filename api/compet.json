@@ -1,0 +1,97 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 100,
+  "data": [
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    },
+    {
+      "category": "省级",
+      "annual": "2023-2024",
+      "topic": "计算机网络",
+      "leader": "张三",
+      "crew": "李四，王五",
+      "grade": "特等",
+      "teacher": "王老师"
+    }
+  ]
+}
